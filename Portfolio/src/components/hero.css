@@ -1,0 +1,77 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.hero-content {
+  max-width: 700px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.chinese-name {
+  color: gray;
+  font-weight: normal;
+  margin-left: 0.5rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-top: 1.5rem;
+  color: #444;
+}
+
+.hero-button {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 12px;
+  transition: background 0.3s;
+}
+
+.hero-button:hover {
+  background-color: #333;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 4rem 1.5rem;
+    justify-content: center;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+
+  .hero-button {
+    padding: 0.65rem 1.25rem;
+    font-size: 0.95rem;
+    margin-top: 1.5rem;
+  }
+
+  .chinese-name {
+    display: block;
+    margin-left: 0;
+    margin-top: 0.5rem;
+    font-size: 1rem;
+  }
+}
+
