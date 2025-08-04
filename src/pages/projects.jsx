@@ -1,7 +1,7 @@
 import React from 'react';
 import './projects.css';
 import frameImg from '../assets/kickboks.png'; // Assuming you have a frame image for the FightZone project
-import zeldaImg from '../assets/zelda.png'; // Example image for a project
+import zeldaImg from '../assets/zeldapicture.png'; // Example image for a project
 import dynamicPosterImg from '../assets/dynamic_poster.png'; // Example image for the dynamic poster
 import uselesswebImg from '../assets/uselesswebsite.png'; // Example image for the Useless Web project
 
