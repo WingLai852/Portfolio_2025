@@ -1,7 +1,7 @@
 import React from 'react';
-import './About.css';
-import profileImg from '../assets/Profile.JPG';
-import snowboardImg from '../assets/snowboard.JPG';
+import './about.css';
+import profileImg from '../assets/profile.JPG';
+
 
 const About = () => {
   return (
