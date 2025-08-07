@@ -14,7 +14,7 @@ const Hero = () => {
           I design and build thoughtful digital products. Passionate about creating seamless user experiences.
         </p>
           <a
-  href="public/curriculum-vitae.pdf"
+  href="/curriculum-vitae.pdf"
   download
   className="hero-button"
 >
