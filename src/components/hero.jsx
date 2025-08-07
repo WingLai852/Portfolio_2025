@@ -8,11 +8,20 @@ const Hero = () => {
       <h1 style={styles.heading}>
         Hi, I’m Lai Wing Ho <span style={styles.inlineChinese}><ChineseName /></span>
     </h1>
+    
 
         <p style={styles.paragraph}>
           I design and build thoughtful digital products. Passionate about creating seamless user experiences.
         </p>
+          <a
+  href="/CV_Rocky_Lai.pdf"
+  download
+  className="hero-button"
+>
+  Download CV
+</a>
       </div>
+    
     </section>
   );
 };
@@ -43,7 +52,11 @@ const styles = {
   display: 'inline-block',
   marginLeft: '0.5rem',
   verticalAlign: 'middle',
-}
+},
+
+
+
+
 };
 
 export default Hero;
