@@ -36,6 +36,11 @@
   animation-delay: 0.1s;
 }
 
+.about-alt-layout {
+  align-items: center;
+  justify-content: space-between;
+}
+
 .profile-photo {
   width: 260px;
   height: 260px;
@@ -45,13 +50,21 @@
   flex-shrink: 0;
 }
 
+.profile-photo.bordered {
+  border-radius: 16px;
+  width: 320px;
+  height: auto;
+}
+
 .about-text {
   flex: 1;
   min-width: 280px;
 }
 
-.about-text h2 {
-  font-size: 2rem;
+.about-text h2,
+.about-text h3,
+.about-text h4 {
+  font-size: 1.75rem;
   margin-bottom: 1rem;
 }
 
@@ -60,6 +73,33 @@
   line-height: 1.75;
   margin-bottom: 1.25rem;
   color: #444;
+}
+
+.highlight-box {
+  background-color: #f5f5f5;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin: 2rem 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.skills-list {
+  margin-top: 2rem;
+}
+
+.skills-list ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  padding: 0;
+  list-style: none;
+}
+
+.skills-list li {
+  background-color: #e0e0e0;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
 }
 
 .about-hobby {
@@ -87,14 +127,6 @@
   line-height: 1.6;
 }
 
-
-
-
-
-
-
-
-/* Fade-in animation */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -106,20 +138,6 @@
   }
 }
 
-
-/* Fade-in animation */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Responsive */
 @media (max-width: 768px) {
   .about-main {
     flex-direction: column;
@@ -137,5 +155,9 @@
 
   .about-text p {
     font-size: 1.05rem;
+  }
+
+  .skills-list ul {
+    justify-content: center;
   }
 }
