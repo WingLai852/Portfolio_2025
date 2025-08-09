@@ -1,39 +1,34 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import './App.css';
 import Navbar from './components/Navbar.jsx';
 import Hero from './components/hero.jsx';
-import About from './pages/about.jsx'; // Assuming you have an About component
-import Contact from './pages/contact.jsx'; // Assuming you have a Contact component
-import Projects from './pages/projects.jsx'; // Assuming you have a Projects component
+import About from './pages/about.jsx';
+import Contact from './pages/contact.jsx';
+import Projects from './pages/projects.jsx';
 
-
-// 🔹 Hotjar tracking hook
-function useHotjarTracking() {
+function HotjarTracker() {
   const location = useLocation();
-
   useEffect(() => {
     if (window.hj) {
       window.hj('stateChange', location.pathname);
-      console.log("Hotjar page view:", location.pathname);
+      // console.log('Hotjar page view:', location.pathname);
     }
   }, [location]);
+  return null; // dit rendert niets
 }
 
 function App() {
-
-  // 🔹 Initialize Hotjar tracking
-  useHotjarTracking();
-
   return (
     <Router>
+      {/* 🔸 Hook staat nu BINNEN de Router */}
+      <HotjarTracker />
       <Navbar />
       <Routes>
         <Route path="/" element={<Hero />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/projects" element={<Projects />} />
-        {/* Add more routes as needed */}
       </Routes>
     </Router>
   );
