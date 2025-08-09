@@ -13,13 +13,7 @@ const Hero = () => {
         <p style={styles.paragraph}>
           I design and build thoughtful digital products. Passionate about creating seamless user experiences.
         </p>
-          <a
-  href="/Curriculum vitae.pdf"
-  download
-  className="hero-button"
->
-  Download CV
-</a>
+          
       </div>
     
     </section>
