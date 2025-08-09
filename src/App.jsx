@@ -21,6 +21,10 @@ function useHotjarTracking() {
 }
 
 function App() {
+
+  // 🔹 Initialize Hotjar tracking
+  useHotjarTracking();
+
   return (
     <Router>
       <Navbar />
