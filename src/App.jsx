@@ -8,6 +8,17 @@ import Contact from './pages/contact.jsx'; // Assuming you have a Contact compon
 import Projects from './pages/projects.jsx'; // Assuming you have a Projects component
 
 
+// 🔹 Hotjar tracking hook
+function useHotjarTracking() {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (window.hj) {
+      window.hj('stateChange', location.pathname);
+      console.log("Hotjar page view:", location.pathname);
+    }
+  }, [location]);
+}
 
 function App() {
   return (
