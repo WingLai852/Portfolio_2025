@@ -1,21 +1,38 @@
+/* ChineseName.css */
+
+/* Zet de CJK fontstack op de wrapper (of gebruik beide selectors) */
+.chinese-name,
+.chinese-name-wrapper {
+  font-family: "Noto Sans SC","PingFang SC","Microsoft YaHei","Heiti SC",
+               "Hiragino Sans GB","Segoe UI Symbol", system-ui, -apple-system,
+               "Segoe UI", Roboto, Arial, sans-serif;
+  color: #6b7280; /* grijs */
+}
+
 .chinese-name-wrapper {
   display: flex;
   gap: 0.5rem;
   font-size: 2.5rem;
-  font-weight: bold;
-  color: gray;
+  font-weight: 700;
   margin-top: 0.5rem;
 }
 
+/* Animatie: verschijnt per karakter */
 .char {
   opacity: 0;
   transform: translateY(10px);
   animation: fadeInUp 0.5s ease forwards;
 }
 
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
+/* Als er een user setting is om animaties te beperken: toon ze meteen */
+@media (prefers-reduced-motion: reduce) {
+  .char { 
+    opacity: 1; 
+    transform: none; 
+    animation: none; 
   }
+}
+
+@keyframes fadeInUp {
+  to { opacity: 1; transform: translateY(0); }
 }

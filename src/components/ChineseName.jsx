@@ -1,9 +1,10 @@
+// ChineseName.jsx
 import React from 'react';
 import './ChineseName.css';
 
 const ChineseName = () => {
   return (
-    <div className="chinese-name-wrapper">
+    <div className="chinese-name chinese-name-wrapper" aria-label="黎穎豪">
       <span className="char" style={{ animationDelay: '0s' }}>黎</span>
       <span className="char" style={{ animationDelay: '0.5s' }}>穎</span>
       <span className="char" style={{ animationDelay: '1s' }}>豪</span>
